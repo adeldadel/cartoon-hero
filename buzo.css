@@ -1,12 +1,12 @@
 body{
 	margin: 0;
-	font-family: 'Helvetidca', 'Arial', sans-serif;
+	font-family: 'Helvetica', 'Arial', sans-serif;
 	font-size: 20px;
 	line-height: 30px;
 }
 
 /* header styles*/
-/* write your comment here*/
+/* Centers content, sets the red background, and styles the circular avatar image */
 
 header{
 	background-color: #d14635;
@@ -75,5 +75,5 @@ footer a:hover{
 p.caption{
 	color: #999999;
 	font-style: italic;
-	margin-top: ; 
+	margin-top: 5px;
 }
