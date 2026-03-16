@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spar with Adel</title>
+  <link rel="icon" href="img/Buzo shaman.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sparring.css">
+</head>
+<body>
+
+  <!-- Header / Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="img/Buzo shaman.jpeg" alt="Adel" class="hero-avatar">
+      <div class="hero-text">
+        <h1>Spar with Adel</h1>
+        <p class="hero-sub">Book a one-on-one boxing & martial arts session.<br>I'll push you to your limits.</p>
+        <a href="#slots" class="btn-primary">Book a session &darr;</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <h2>Who am I?</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="icon">&#x1F94A;</span>
+          <h3>Boxing</h3>
+          <p>Years of ring experience. Whether you're a complete beginner or looking to sharpen your technique, I'll tailor every session to you.</p>
+        </div>
+        <div class="about-card">
+          <span class="icon">&#x1F9BE;</span>
+          <h3>Conditioning</h3>
+          <p>Sparring isn't just punching. We'll work on footwork, defense, and the cardio that keeps you standing in round 5.</p>
+        </div>
+        <div class="about-card">
+          <span class="icon">&#x1F3AF;</span>
+          <h3>Focus</h3>
+          <p>Small group or 1-on-1. No ego, no nonsense — just clean, purposeful work every session.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Slots -->
+    <section class="slots-section" id="slots">
+      <h2>Available Sessions</h2>
+      <p class="slots-intro">Pick a slot below and fill in your details to lock it in.</p>
+
+      <div id="slots-loading" class="slots-status">Loading available sessions...</div>
+      <div id="slots-empty" class="slots-status" style="display:none;">No sessions available right now. Check back soon!</div>
+      <div id="slots-error" class="slots-status error" style="display:none;">Could not load sessions. Please refresh the page.</div>
+
+      <div id="slots-grid" class="slots-grid" style="display:none;"></div>
+    </section>
+
+    <!-- Booking Form (hidden until slot selected) -->
+    <section class="form-section" id="booking-section" style="display:none;">
+      <h2>Complete Your Booking</h2>
+      <div class="selected-slot-display" id="selected-slot-display"></div>
+
+      <form id="booking-form" novalidate>
+        <input type="hidden" id="slot-id" name="slot_id">
+
+        <div class="form-group">
+          <label for="name">Full name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone <span class="optional">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000">
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Experience level</label>
+          <select id="experience" name="experience_level">
+            <option value="">Select...</option>
+            <option value="beginner">Beginner — never sparred before</option>
+            <option value="intermediate">Intermediate — some experience</option>
+            <option value="advanced">Advanced — regular sparring</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Anything I should know? <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Injuries, goals, questions..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="cancel-booking" class="btn-secondary">&#8592; Change slot</button>
+          <button type="submit" id="submit-booking" class="btn-primary">Confirm booking</button>
+        </div>
+
+        <div id="form-error" class="form-error" style="display:none;"></div>
+      </form>
+    </section>
+
+    <!-- Confirmation -->
+    <section class="confirmation" id="confirmation-section" style="display:none;">
+      <div class="confirmation-inner">
+        <div class="confirmation-icon">&#x2705;</div>
+        <h2>You're in!</h2>
+        <p id="confirmation-text"></p>
+        <p>I'll be in touch to confirm the details. See you on the mat.</p>
+        <button class="btn-primary" onclick="location.reload()">Book another session</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; adeldadel &mdash; All rights reserved.</p>
+  </footer>
+
+  <script src="sparring.js"></script>
+</body>
+</html>
